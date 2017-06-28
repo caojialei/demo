@@ -1,0 +1,24 @@
+.mainbody .con.wz-man-tag .inner-con .tag-items:after {
+		clear: both;
+		content: '';
+		display: block;
+}
+
+.mainbody .con.wz-man-tag .inner-con .tag-items {
+	font-size: 0;
+}
+.mainbody .con.wz-man-tag .inner-con .tag-items>li{ width: 83px;
+	height: 37px;
+	line-height: 37px;
+	text-align: center;
+	display: inline-block;
+	font-size: 14px;
+	background: #f7f8fa;
+	border: 1px solid #eff1f2;
+	margin: 0;
+	cursor: move; }
+.mainbody .con.wz-man-tag .inner-con .tag-items>li.on{    border: 1px solid #2196f3;
+	color: #2196f3;}
+
+
+

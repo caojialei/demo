@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="../dist/css/swiper.min.css">
+    <link rel="stylesheet" href="../dist/css/animate.min.css">
+</head>
+<body>
+    <div class="swiper-container swiper-container-horizontal" id="swiper-container2">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                版块1</div>
+            <div class="swiper-slide" >
+                版块2</div>
+            <div class="swiper-slide ">
+                版块3</div>
+            <div class="swiper-slide">
+                版块4</div>
+            <div class="swiper-slide">
+                版块5</div>
+            <div class="swiper-slide">
+                版块6</div>
+            <div class="swiper-slide">
+                版块7</div>
+            <div class="swiper-slide">
+                版块8</div>
+        </div>
+    </div>
+    <div class="swiper-container swiper-container-horizontal" id="swiper-container3">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide blue-slide">
+                slider1</div>
+            <div class="swiper-slide red-slide">
+                slider2</div>
+            <div class="swiper-slide orange-slide">
+                slider3</div>
+            <div class="swiper-slide blue-slide">
+                slider4</div>
+            <div class="swiper-slide red-slide">
+                slider5</div>
+            <div class="swiper-slide orange-slide">
+                slider6</div>
+            <div class="swiper-slide blue-slide">
+                slider7</div>
+            <div class="swiper-slide red-slide">
+                slider8</div>
+        </div>
+    </div>
+    <script src="../dist/js/swiper.min.js"></script>
+    <script>
+        var mySwiper2 = new Swiper('#swiper-container2',{
+            watchSlidesProgress : true,
+            watchSlidesVisibility : true,
+            slidesPerView : 3,
+            onTap: function(){
+                mySwiper3.slideTo( mySwiper2.clickedIndex)
+            }
+        })
+        var mySwiper3 = new Swiper('#swiper-container3',{
+
+            onSlideChangeStart: function(){
+                updateNavPosition()
+            }
+
+        })
+
+        function updateNavPosition(){
+            $('#swiper-container2 .active-nav').removeClass('active-nav')
+            var activeNav = $('#swiper-container2 .swiper-slide').eq(mySwiper3.activeIndex).addClass('active-nav');
+
+
+            if (!activeNav.hasClass('swiper-slide-visible')) {
+                console.log(1);
+                if (activeNav.index()>mySwiper2.activeIndex) {
+                    console.log(2);
+                    var thumbsPerNav = Math.floor(mySwiper2.width/activeNav.width())-1
+                    mySwiper2.slideTo(activeNav.index()-thumbsPerNav)
+                }
+                else {
+                    console.log(3);
+                    mySwiper2.slideTo(activeNav.index())
+                }
+            }
+        }
+    </script>
+</body>
+</html>

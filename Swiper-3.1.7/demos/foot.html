@@ -1,0 +1,195 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>爽健足迹</title>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0'/>
+<link rel="stylesheet" href="../dist/css/swiper.min.css">
+<link rel="stylesheet" href="../dist/css/animate.min.css">
+<script src="../dist/js/jquery-2.1.4.min.js"></script>
+<script src="../dist/js/swiper.min.js"></script>
+<script src="../dist/js/swiper.animate.min.js"></script>
+<style>
+*{
+	margin:0;
+	padding:0;
+}
+html,body{
+	height:100%;
+}
+body{
+	font-family:"微软雅黑",Arial, Helvetica, sans-serif;
+}
+.swiper-container {
+	width: 100%;
+    height: 100%;
+    background:url(http://lvyou.baidu.com//static/native/discovery/footprint/img/bg-body_30d3493.jpg) no-repeat center top;
+    background-size:100%;
+}
+.swiper-slide{
+	width:100%;
+	height:100%;
+    color: #fff;
+    text-align: center;
+}
+.swiper-slide .intro{width: 80%;margin: 10%  auto 0;font-size: 14px;background: rgba(0,0,0,.2);position: relative}
+a{color: orange}
+img{display:block;}
+
+
+    /*wrap*/
+.swiper-container.wrap {
+    width: 80%;
+    height: auto;
+    margin:0 auto;
+    background: transparent;
+}
+.swiper-slide.wrap {
+    text-align: center;
+    font-size: 18px;
+    height: 40px;
+
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
+/*.swiper-slide.wrap2*/
+.swiper-container.wrap2{width: 80%;height:50%;margin: 0 auto;background: transparent;}
+.swiper-container.wrap2 .swiper-slide.wrap2{background: rgba(0,0,0,.5);}
+/*前后切换键*/
+.swiper-button-next.swiper-button-disabled, .swiper-button-prev.swiper-button-disabled{opacity: 0}
+/*area_icon*/
+.area_icon{height: 100px;}
+.area_icon>img{float: left;width: 70px;margin-right: 20px;display: none}
+/*.area_icon>img.show{display: block}*/
+</style>
+</head>
+
+<body>
+<div class="swiper-container vertical">
+    <div class="swiper-wrapper vertical">
+    <!-------------slide1----------------->
+        <section class="swiper-slide vertical">
+            <div class="intro ani resize" swiper-animate-effect="zoomIn" swiper-animate-duration=".5s" swiper-animate-delay="0.3s">
+                <header>
+                    <h1>爽健足迹</h1>
+                    <p>我们用双脚征服了这片土地</p>
+                </header>
+                <p>一直在路上<br>用双脚踏遍祖国的千山万水看遍这大好美景<br>亲爱的，这无数次的旅程中最应该感谢的<br>便是带领我们行走着的双脚<br>它带我们走过了多少地方<br>留下了多少足迹<br>一起去看一看吧</p>
+                <a id="begin" href="javascript:void(0)">开启我们的足迹</a>
+            </div>
+            <!--<span class="earth_animation ani resize" swiper-animate-effect="fadeInUp" swiper-animate-duration=".5s " swiper-animate-delay="0.3s">
+                <span class="earth-ball-wrap">
+                    <i class="earth_ball"></i>
+                </span>
+            </span>-->
+        </section>
+    <!---------------slide2-------------->
+        <section class="swiper-slide vertical">
+            <header class="ani resize" swiper-animate-effect="zoomIn" swiper-animate-duration=".5s" swiper-animate-delay="0.1s">爽健足迹
+                <div class="area_icon">
+                    <img class="area1" id="p1" src="upload/1.png">
+                    <img class="area2" id="p2" src="upload/2.png">
+                    <img class="area3" id="p3" src="upload/3.png">
+                    <img class="area4" id="p4" src="upload/4.png">
+                    <img class="area5" id="p5" src="upload/5.png">
+                    <img class="area6" id="p6" src="upload/6.png">
+                </div>
+            </header>
+            <div class="swiper-container wrap ani resize" swiper-animate-effect="fadeInUp" swiper-animate-duration=".5s" swiper-animate-delay="0.3s">
+                <div class="swiper-wrapper wrap">
+                    <div class="swiper-slide wrap area1" for="p1">Slide 1</div>
+                    <div class="swiper-slide wrap area1" for="p1">Slide 2</div>
+                    <div class="swiper-slide wrap area2" for="p2">Slide 3</div>
+                    <div class="swiper-slide wrap area2" for="p2">Slide 4</div>
+                    <div class="swiper-slide wrap area3" for="p3">Slide 5</div>
+                    <div class="swiper-slide wrap area3" for="p4">Slide 6</div>
+                    <div class="swiper-slide wrap area4" for="p4">Slide 7</div>
+                    <div class="swiper-slide wrap area5" for="p5">Slide 8</div>
+                    <div class="swiper-slide wrap area6" for="p6">Slide 9</div>
+                    <div class="swiper-slide wrap area6" for="p6">Slide 10</div>
+                </div>
+                <div class="swiper-button-prev wrap"></div>
+                <div class="swiper-button-next wrap"></div>
+            </div>
+        </section>
+    <!----------------slide3-------------->
+        <section class="swiper-slide vertical">
+            <header>成就奖</header>
+            <div class="swiper-container wrap2 ani resize" swiper-animate-effect="zoomIn" swiper-animate-duration=".5s" swiper-animate-delay="0.3s">
+                <div class="swiper-wrapper wrap2">
+                    <div class="swiper-slide wrap2">Slide 1</div>
+                    <div class="swiper-slide wrap2">Slide 2</div>
+                    <div class="swiper-slide wrap2">Slide 3</div>
+                </div>>
+            </div>
+        </section>
+    <!-------------slide4----------------->
+        <section class="swiper-slide vertical">
+
+        </section>
+    </div>
+    <img src="http://lvyou.baidu.com/images/web-swipe-tip.png" style="width:20px;height:15px; top:460px; left:150px;" id="array" class="resize">
+    <div class="swiper-pagination vertical"></div>
+</div>
+
+<!--竖线-->
+<script>
+var mySwiper = new Swiper ('.swiper-container.vertical', {
+    direction : 'vertical',
+    pagination: '.swiper-pagination.vertical',
+    mousewheelControl : true,
+    onInit: function(swiper){
+        swiperAnimateCache(swiper);
+        swiperAnimate(swiper);
+    },
+    onSlideChangeEnd: function(swiper){
+        swiperAnimate(swiper);
+    }
+});
+$("#begin").click(function(){
+    mySwiper.slideTo(1, 500);//切换到第一个slide，速度为1秒
+});
+
+</script>
+<!--区域切换-->
+<script>
+    var swiperWrap = new Swiper('.swiper-container.wrap', {
+        pagination: '.swiper-pagination.wrap',
+        slidesPerView: 3,
+        slidesPerColumn: 2,
+        paginationClickable: true,
+        spaceBetween: 30,
+        prevButton:'.swiper-button-prev.wrap',
+        nextButton:'.swiper-button-next.wrap',
+    });
+</script>
+<!--点击出现对应图标-->
+<script>
+  /*  $(".swiper-slide.area1").click(function(){
+        $("img.area1").fadeIn(1000);
+    });
+    $(".swiper-slide.area6").click(function(){
+        $("img.area6").fadeIn(1000);
+    });*/
+
+</script>
+<!--成就切换-->
+<script>
+    var swiperWrap2 = new Swiper('.swiper-container.wrap2', {
+        spaceBetween: 30,
+    });
+</script>
+
+</body>
+</html>
